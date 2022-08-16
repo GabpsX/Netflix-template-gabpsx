@@ -1,908 +1,753 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
-<html lang="pt-br">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Netflix Brazil - Watch TV Shows Online, Watch Movies Online</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-    </head>
-    <style>
-        @font-face {
-            font-family: 'Netflix';
-            src: URL('NetflixSans_W_Rg.ttf') format('truetype');
-        }
-        body{
-            scroll-behavior: auto;
-            scroll-behavior: smooth;
-            font-family: Netflix;
-            align-items: center;
-            margin-left: auto;
-            margin-right: auto;
-            height: 100%;
-            width: 100%;
-           
-            font-size: 1rem;
-            line-height: 1.1;
-            margin-bottom: .5rem;
-}
-            
-        
-        header {
-            border-bottom: 9px solid rgb(63, 58, 58);
-            height: calc(100vh - 120px);
-            background-image:url("background.jpg");
-            background-repeat: no-repeat;
-            background-size: cover;
-            
-      
-
-        }
-
-    </style>
-          <style>
-
-            .logo_netfix{
-                margin-top: 4%;
-                margin-left: 4%;
-                max-width: 120px;
-                min-width: 120px;
-            }
-            .btn-1{
-                width: 20px;
-                height: 20px;
-                overflow: hidden;
-                padding-left: 1.375rem;
-                padding-right: 1.375rem;
-                white-space: nowrap;
-} .a_b{
-    border-radius: 8px;
-    border: transparent;
-    font-size: 12px;
-    width: auto;
-    height: auto;
-    background-color: #e50914;
-    float: right;
-    font-weight: 700;
-    line-height: normal;
-    padding: 7px 17px;
-    color: white;
-}
-.btn-1{
-    margin: 0 10px;
-}
-.ui{
-    font-size: 1.5em;
-    color: white;
-    background-color: transparent;
-    border: solid 1px;
-    width: 100px;
-    text-align: center;
-    height: 30px;
-    font-weight: 400;
-    border-radius: 5px;
-}
-.but-flex{
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-}
-.disp-flex-{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.card {
-                  
-  
-                font-size: 1em;
-            
-                text-align: center;
-                color: white;
-
-                color: #fff;
-                margin-bottom: 0;
- 
-                position: relative;
-}
-</style>
-
-
-<body>
-
-
-    <header>
-        <div class="disp-flex-">
-        <img class="logo_netfix" src="netflix-logo-5.png" alt="">
-        <div class="but-flex">
-            <select class="ui " tabindex="0" placeholder="lang-switcher" (change)="changeLanguage($event.target.value)">
-                <option [selected]="language === 'br'" value="br" data-language="pt" data-country="BR">Português</option>
-                <option [selected]="language === 'en'" value="en" data-language="en" data-country="BR">English</option>
-            </select>
-            <button class="btn-1  a_b" type="button">Sign In</h1></button>
-        </div>
-        </div>
-
-        <div class="card">
-        <h1>
-            Unlimited movies, TV shows, and more.
-        </h1>
-        <h3>
-            Watch anywhere. Cancel anytime.
-        </h3>
-        <h3>
-            Ready to watch? Enter your email to create or restart your membership.
-        </h3>
-        
-        <form>
-            <input type='text' name='pesquisa' placeholder='Email address'>
-            <button type='submit'>Get Started ></button>
-          </form>
-       
-        </div>
-    </header>
-
-
-
-
-
-
-
-
-
-
-        <style>
-            input{
-            
-                width:50%;
-                height: 60px;
-            }
-form{
-    position: relative;
-    left: -20px;
-    right: 0;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-    form > input {
-      border: none;
-
-    }
-
-    form > button {
-
-        position: absolute;
-        height: 60px;
-        background-color: #e50914;
-        background-image: linear-gradient(180deg,#e50914,#db0510);
-        box-shadow: 0 1px 0rgba(0,0,0,.45);
-        color: #fff;
-        border: solid red;
-        color: #fff;
-
-    }
-            * {
-                letter-spacing: 0!important;
-            }
-            .grad {
-                
-                min-height:491.9px;
-                min-width: 327px;
-                width: 100%;
-                background: rgba(0,0,0,.4);
-                background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 60%,rgba(0,0,0,.8));
-            }
-            .grad{
-                background-image: url('background.jpg');
-                background-repeat: no-repeat;
-                background-attachment: fixed;
-                background-size: cover;
-
-            }
-            
-
-
-           .card {
-                margin: 0 auto;
-                max-width: 950px;
-                padding: 75px 0;
-                position: relative;
-                text-align: center;
-                width: 100%;
-                z-index: 999;
-            }
-
-            #email {
-                width: 90%;
-                height: 60px;
-            }
-
-            .label-float {
-                
-  position: relative;
-  padding-top: 13px;
-}
-
-.label-float input {
-  border: 1px solid lightgrey;
-  border-radius: 1px;
-  outline: none;
-  min-width: 250px;
-  padding: 15px 20px;
-  font-size: 16px;
-  transition: all .1s linear;
-  -webkit-transition: all .1s linear;
-  -moz-transition: all .1s linear;
-  -webkit-appearance: none;
-}
-
-.label-float input:focus {
-  border: 2px solid #3951b2;
-}
-
-.label-float input::placeholder {
-  color: transparent;
-}
-
-.label-float label {
-  pointer-events: none;
-  position: absolute;
-  top: calc(80% - 150px);
-  left: 15px;
-  transition: all .1s linear;
-  -webkit-transition: all .1s linear;
-  -moz-transition: all .1s linear;
-  background-color: white;
-  padding: 5px;
-  box-sizing: border-box;
-}
-
-.label-float input:required:invalid+label {
-  color: rgb(10, 10, 10);
-}
-
-.label-float input:focus:required:invalid {
-  border: 2px solid rgba(104, 190, 247, 0.897);
-}
-
-
-.label-float input:focus+label,
-.label-float input:not(:placeholder-shown)+label {
-  font-size: 13px;
-  top: 0;
-  color: #3951b2;
-}
-
-
-.label-float {
-  border: 2px solid #ccc;
-  display: inline-block;
-  padding: 4px;
-  height: 60px;
-  background-color: rgb(255, 255, 255);
-}
-
-.label-float > input {
-  border: none
-}
-
-.label-float > button {
-
-    background-color: #e50914;
-    background-image: linear-gradient(180deg,#e50914,#db0510);
-    box-shadow: 0 1px 0rgba(0,0,0,.45);
-    color: #fff;
-
-  border: none;
-  color: #fff;
-  padding: 4px 10px;
-  height:59px;
-
-
-  align-items: center;
-    display: inline-flex;
-    flex-direction: row;
-    line-height: normal;
-    margin: 0.25em auto;
-    padding: 0 1em;
-    width: auto;
-}
-
-/**/           
- @media only screen and (min-width:955px){   
-    .sec--3{
-        position:absolute;
-        height: 600px;
-    }
-    .box-shot{
-            display: inline-block;
-            align-items: left;
-            width: 45px;
-            left: 0;
-
-            }
-            .mob-img{
-                margin: auto;
-                display: block;
-                position: absolute;
-                max-width: 300px;
-                max-height: 500px;
-
-            }
-            .anim-but-select{
-                position: absolute;
-                top:390px;
-                left: 220px;
-                z-index: 999;
-            }
-      
-            .anim-button-download {
-               
-                left: 0;
-                position: absolute;
-                align-items: center;
-                background: #000;
-                border: 2px solid hsla(0,0%,100%,.25);
-                border-radius: .75em;
-                bottom: 18%;
-                box-shadow: 0 0 2em 0 #000;
-                display: flex;
-                left: 50%;
-                margin: 0 auto;
-                min-width: 15em;
-                padding: .25em .65em .1em 1em;
-                position: absolute;
-                transform: translateX(-50%);
-                min-width: 280px;
-                min-height:2px;
-              
-            }
-            .gif-down{
-                display: flex;
-                width: 45px;
-                position: absolute;
-                right: 0;
-                top:0;
-                bottom:0;
-                margin-top: auto;
-                margin-bottom: auto;
-                padding-right: 5%;
-                align-items: center;
-            }
-            .brek{
-                margin-left: 5%;
-                width: 120px;
-                overflow-wrap: break-word;
-                text-align: left;
-            }
-        .style-text{
-            text-align: right;
-            position: absolute;
-            display: inline;
-            width: 450px;
-            text-align: left;
-            right: 200px;
-            min-width: 200px;
-            top: 200px;
-        }}
-     
-
-        </style>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        <style>
-            @media only screen and (max-width: 349px), only screen and (min-width: 350px) and (max-width: 399px), only screen and (min-width: 400px) and (max-width: 549px)
-            {
-            .sec-3 {
-                font-size: 1.125rem;
-            }
-            .brek{
-                margin-left: 5%;
-                width: 120px;
-                overflow-wrap: break-word;
-                text-align: left;
-            }
-            .break-line{
-                color: #0071eb;
-                font-size: .75em;
-                font-weight: 400;
-           
-            }
-            
-            h1{
-                font-size: 27px;
-                 margin: 0 0 .4em;
-            }
-            .mob-img{
-                margin: auto;
-                display: block;
-                position: relative;
-                top: -15px;
-                max-width: 430px;
-                max-height: 500px;
-
-            }
-            .sec-3{
-               
-               
-                font-size: 1em;
-                padding-top: 6%;
-                padding-bottom: 6%;
-                background-color: black;
-                text-align: center;
-                color: white;
-                margin-left:auto;
-                margin-right: auto;
-              
-
-                color: #fff;
-                margin-bottom: 0;
-                padding: 50px 5%;
-                position: relative;
-            }
-            
-            .anim-button-download {
-                align-items: center;
-                background: #000;
-                border: 2px solid hsla(0,0%,100%,.25);
-                border-radius: .75em;
-                bottom: 8%;
-                box-shadow: 0 0 2em 0 #000;
-                display: flex;
-                left: 50%;
-                margin: 0 auto;
-                min-width: 15em;
-                padding: .25em .65em .1em 1em;
-                position: absolute;
-                transform: translateX(-50%);
-                min-width: 280px;
-                min-height: 30px;
-              
-            }
-            .box-shot{
-                margin-top: auto;
-                margin-bottom: auto;
-                display: flex;
-                align-items: center;
-                width: 30px;
-                left: 0;
-            }
-
-
-            .gif-down{
-                display: flex;
-                width: 45px;
-                position: absolute;
-                right: 0;
-                top:0;
-                bottom:0;
-                margin-top: auto;
-                margin-bottom: auto;
-                padding-right: 5%;
-                align-items: center;
-            }}
-            .kids-a-img{
-                max-width: 100%;
-            }
-            /*mobile*/
-
-             /*desktop*/
-             .sec-3{
-                border-bottom: 9px solid rgb(63, 58, 58);
-            
-                font-size: 1em;
-                padding-top: 6%;
-                padding-bottom: 6%;
-                background-color: black;
-                text-align: center;
-                color: white;
-                margin-left:auto;
-                margin-right: auto;
-              
- 
-                color: #fff;
-                margin-bottom: 0;
-                padding: 50px 5%;
-                position: relative;
-            }
-            @media only screen and (min-width:955px){
-                .sec-3{
-                display: flex;
-                border-top: 9px solid rgb(63, 58, 58);
-               
-                font-size: 1em;
-                padding-top: 6%;
-                padding-bottom: 6%;
-                background-color: black;
-                text-align: center;
-                color: white;
-                margin-left:auto;
-                margin-right: auto;
-              
-
-                color: #fff;
-                margin-bottom: 0;
-                padding: 50px 5%;
-                position: relative;
-            }
-        }
-        .text-align-style{
-            text-align: left;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        } 
-        </style>
-        <section class="sec-3">
-        <div class="text-align-style">
-            <div>
-            <h1>Enjoy on your TV.</h1>
-            <h3>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</h3>
-            </div>
-        </div>
-            <img class="kids-a-img"src="20220815_185049.gif" alt="kids">
-        
-        </section>
-        
-
-        <section class="sec-3 sec--3">
-            <div class="style-text">
-            <h1>
-                Download your shows to watch offline.
-            </h1>
-            <h3>
-                Save your favorites easily and always have something to watch.
-            </h3>
-        </div>
-            <img class="mob-img" src="mobile-0819.jpg" alt="">
-            
-            <div class="anim-but-select">
-            <div class="anim-button-download">
-                <img class="box-shot" src="boxshot.png" alt="">
-                <p class="brek">Stranger Things <a class="break-line">Downloading...</a></p</div>
-                <img class="gif-down" src="download-icon.gif" alt="">
-            </div>
-            </div>
-        </section>
-
-        <section class="sec-3">
-            <div class="text-align-style">
-                <div>
-                    <h1>Watch everywhere.</h1>
-                    <h3>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</h3>
-                </div>
-            </div>
-            <div>
-           
-            </div>
-            <img class="kids-a-img"src="20220815_185121.gif" alt="kids">
-           
-        </section>
-
-
-        <section class="sec-3">
-            <div class="text-align-style">
-                <div>
-                    <h1>Create profiles for kids.</h1>
-                    <h3>Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</h3>
-                </div>
-            </div>
-           
-            <img class="kids-a-img"src="kid.png" alt="kids">
-        </section>
-        <style>
-            .set-in-line-bt{
-                display: break;
- 
-                font-size: 1em;
-                padding-top: 6%;
-                padding-bottom: 6%;
-                background-color: black;
-                text-align: center;
-                color: white;
-              
-              
-
-                color: #fff;
-                margin-bottom: 0;
-             
-                position: relative;
-            }
-            :root{
-                --clr: #303030;
-            }
-            .button-1,.button-2, .button-3, .button-4, .button-5, .button-6{
-                border: 0;
-                font-weight: 400;
-                margin-bottom: 1px;
-                padding: .8em 2.2em .8em 1.2em;
-                position: relative;
-                width: 100%;
-                background-color: var(--clr);
-                text-align: left;
-
-                margin-top:.6% ;
-
-                
-            }
-          #but-1,#but-2,#but-3,#but-4,#but-5,#but-6{
-           
-            padding: 1.2em;
-            text-align: left;
-            background-color: var(--clr);
-            margin-bottom: 1px;
-          }
-
-        </style>
-        <section class="set-in-line-bt">
-            <br>
-            <h1>Frequently Asked Questions</h1>
-            <br>
-            <button type="button" class="button-1" data-toggle="collapse" data-target="#but-1"><h4 class="inf-f">What is Netflix?</h4></button>
-            <div id="but-1" class="collapse">
-                <h4>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.</h4>
-                <h4>You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!</h4>
-              </div>
-
-            <button type="button" class="button-2" data-toggle="collapse" data-target="#but-2"><h4 class="inf-f">How much does Netflix cost?</h4></button>
-            <div id="but-2" class="collapse">
-                <h4>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from BRL25.90 to BRL55.90 a month. No extra costs, no contracts.</h4>
-        
-              </div>
-
-              <button type="button" class="button-3" data-toggle="collapse" data-target="#but-3"><h4 class="inf-f">Where can I watch?</h4></button>
-              <div id="but-3" class="collapse">
-                <h4>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</h4>
-                <br>
-                <h4>You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</h4>
-              </div>
-
-              <button type="button" class="button-4" data-toggle="collapse" data-target="#but-4"><h4 class="inf-f">How do I cancel?</h4></button>
-              <div id="but-4" class="collapse">
-                <h4>Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</h4>
-              </div>
-
-              <button type="button" class="button-5" data-toggle="collapse" data-target="#but-5"><h4 class="inf-f">What can I watch on Netflix?</h4></button>
-              <div id="but-5" class="collapse">
-                <h4>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</h4>
-              </div>
-
-              <button type="button" class="button-6" data-toggle="collapse" data-target="#but-6"><h4 class="inf-f">Is Netflix good for kids?</h4></button>
-              
-              <div id="but-6" class="collapse">
-                  <h4>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.</h4>
-                  <br>
-                  <h4>Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</h4>
-              </div>
-              <style>
-
-
-                @media only screen and (max-width: 349px), only screen and (min-width: 350px) and (max-width: 399px), only screen and (min-width: 400px) and (max-width: 549px)
-            {
-                .text-align-style{
-                    text-align: center;
-                    display: block;
-                    justify-content: space-between;
-                    align-items: center;
-        } 
-                header {
-            height: calc(100vh - 100px);
-        }
-            .anim-but-select{
-                position: relative;
-                top: -40px;
-            }
-                
-                .mob-img{
-                margin: auto;
-                display: block;
-                position: relative;
-                top: -15px;
-                max-width: 430px;
-                max-height: 300px;
-
-            }
-
-            .grad {
-                
-                min-height:491.9px;
-                min-width: 327px;
-                width: 100%;
-                height: 500px;
-        
-             
-            }
-                
-            .sec-3 {
-                font-size: 1.125rem;
-            }
-
-            .button-1,.button-2, .button-3, .button-4, .button-5, .button-6{
-                border: 0;
-                font-weight: 400;
-                margin-bottom: 1px;
-                padding: .8em 2.2em .8em 1.2em;
-                position: relative;
-                width: 100%;
-                background-color: var(--clr);
-                text-align: left;
-
-                margin-top:1% ;
-            }
-                
-            .brek{
-                margin-left: 5%;
-                width: 120px;
-                overflow-wrap: break-word;
-                text-align: left;
-            }}
-                /*desktop*/
-                                /*mobile*/
-                /*
-                @media only screen and (min-width: 1450px), only screen and (min-width: 550px) and (max-width: 949px), only screen and (min-width: 950px) and (max-width: 1449px){
- */
-              .form{
-                display: flex;
-                flex-direction: column;
-             }
-             
-
-            </style>
-              <div class="form"></div>
-              <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
-              <form>
-                <input type='text' name='pesquisa' placeholder='Email address'>
-                <button type='submit'>Get Started ></button>
-              </form>
-        </section>
-        <style>
-            .site-footer-wrapper {
-                background-color: black;
-                display: flex;
-                font-size: 1.5em;
-                clear:both;
-                margin:0 auto;
-                padding-top:15px;
-                line-height: 1.5em;
-                text-transform:uppercase;
-                letter-spacing:.1em;
-                text-align: center;
-
-                
-            }
-            div ul li{
-                text-decoration: none;
-                list-style: none;
-                text-align: left;
-            }
-            .footer-top{
-                margin-left: 4px;
-                display: inline-block;
-                font-size: 1em;
-            }
-        </style>
-             <div class="site-footer-wrapper centered dark">
-                <div class="footer-divider"></div>
-                <div class="site-footer">
-                    <p class="footer-top">Dúvidas
+<!--[if lt IE 7]>      
+<html class="no-js lt-ie9 lt-ie8 lt-ie7">
+   <![endif]-->
+   <!--[if IE 7]>         
+   <html class="no-js lt-ie9 lt-ie8">
+      <![endif]-->
+      <!--[if IE 8]>         
+      <html class="no-js lt-ie9">
+         <![endif]-->
+         <!--[if gt IE 8]>      
+         <html class="no-js">
+            <!--<![endif]-->
+            <html lang="pt-br">
+               <head>
+                  <meta charset="utf-8">
+                  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+                  <title>Netflix Brazil - Watch TV Shows Online, Watch Movies Online</title>
+                  <meta name="description" content="">
+                  <meta name="viewport" content="width=device-width, initial-scale=1">
+                  <link rel="stylesheet" href="style.css">
+                  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+                  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+                  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+               </head>
+               <style>
+                  @font-face {
+                  font-family: 'Netflix';
+                  src: URL('NetflixSans_W_Rg.ttf') format('truetype');
+                  }
+                  body{
+                  scroll-behavior: auto;
+                  scroll-behavior: smooth;
+                  font-family: Netflix;
+                  align-items: center;
+                  margin-left: auto;
+                  margin-right: auto;
+                  height: 100%;
+                  width: 100%;
+                  font-size: 1rem;
+                  line-height: 1.1;
+                  margin-bottom: .5rem;
+                  }
+                  header {
+                  border-bottom: 9px solid rgb(63, 58, 58);
+                  height: calc(100vh - 120px);
+                  background-image:url("background.jpg");
+                  background-repeat: no-repeat;
+                  background-size: cover;
+                  }
+               </style>
+               <style>
+                  .logo_netfix{
+                  margin-top: 4%;
+                  margin-left: 4%;
+                  max-width: 120px;
+                  min-width: 120px;
+                  }
+                  .btn-1{
+                  width: 20px;
+                  height: 20px;
+                  overflow: hidden;
+                  padding-left: 1.375rem;
+                  padding-right: 1.375rem;
+                  white-space: nowrap;
+                  } .a_b{
+                  border-radius: 8px;
+                  border: transparent;
+                  font-size: 12px;
+                  width: auto;
+                  height: auto;
+                  background-color: #e50914;
+                  float: right;
+                  font-weight: 700;
+                  line-height: normal;
+                  padding: 7px 17px;
+                  color: white;
+                  }
+                  .btn-1{
+                  margin: 0 10px;
+                  }
+                  .ui{
+                  font-size: 1.5em;
+                  color: white;
+                  background-color: transparent;
+                  border: solid 1px;
+                  width: 100px;
+                  text-align: center;
+                  height: 30px;
+                  font-weight: 400;
+                  border-radius: 5px;
+                  }
+                  .but-flex{
+                  display: flex;
+                  justify-content: space-evenly;
+                  align-items: center;
+                  }
+                  .disp-flex-{
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+                  }
+                  .card {
+                  font-size: 1em;
+                  text-align: center;
+                  color: white;
+                  color: #fff;
+                  margin-bottom: 0;
+                  position: relative;
+                  }
+               </style>
+               <body>
+                  <header>
+                     <div class="disp-flex-">
+                        <img class="logo_netfix" src="netflix-logo-5.png" alt="">
+                        <div class="but-flex">
+                           <select class="ui " tabindex="0" placeholder="lang-switcher" (change)="changeLanguage($event.target.value)">
+                              <option [selected]="language === 'br'" value="br" data-language="pt" data-country="BR">Português</option>
+                              <option [selected]="language === 'en'" value="en" data-language="en" data-country="BR">English</option>
+                           </select>
+                           <button class="btn-1  a_b" type="button">Sign In</h1></button>
+                        </div>
+                     </div>
+                     <div class="card">
+                        <h1>
+                           Unlimited movies, TV shows, and more.
+                        </h1>
+                        <h3>
+                           Watch anywhere. Cancel anytime.
+                        </h3>
+                        <h3>
+                           Ready to watch? Enter your email to create or restart your membership.
+                        </h3>
+                        <form>
+                           <input type='text' name='pesquisa' placeholder='Email address'>
+                           <button type='submit'>Get Started ></button>
+                        </form>
+                     </div>
+                  </header>
+                  <style>
+                     input{
+                     width:50%;
+                     height: 60px;
+                     }
+                     form{
+                     position: relative;
+                     left: -20px;
+                     right: 0;
+                     margin-left: auto;
+                     margin-right: auto;
+                     }
+                     form > input {
+                     border: none;
+                     }
+                     form > button {
+                     position: absolute;
+                     height: 60px;
+                     background-color: #e50914;
+                     background-image: linear-gradient(180deg,#e50914,#db0510);
+                     box-shadow: 0 1px 0rgba(0,0,0,.45);
+                     color: #fff;
+                     border: solid red;
+                     color: #fff;
+                     }
+                     * {
+                     letter-spacing: 0!important;
+                     }
+                     .grad {
+                     min-height:491.9px;
+                     min-width: 327px;
+                     width: 100%;
+                     background: rgba(0,0,0,.4);
+                     background-image: linear-gradient(0deg,rgba(0,0,0,.8) 0,transparent 60%,rgba(0,0,0,.8));
+                     }
+                     .grad{
+                     background-image: url('background.jpg');
+                     background-repeat: no-repeat;
+                     background-attachment: fixed;
+                     background-size: cover;
+                     }
+                     .card {
+                     margin: 0 auto;
+                     max-width: 950px;
+                     padding: 75px 0;
+                     position: relative;
+                     text-align: center;
+                     width: 100%;
+                     z-index: 999;
+                     }
+                     #email {
+                     width: 90%;
+                     height: 60px;
+                     }
+                     .label-float {
+                     position: relative;
+                     padding-top: 13px;
+                     }
+                     .label-float input {
+                     border: 1px solid lightgrey;
+                     border-radius: 1px;
+                     outline: none;
+                     min-width: 250px;
+                     padding: 15px 20px;
+                     font-size: 16px;
+                     transition: all .1s linear;
+                     -webkit-transition: all .1s linear;
+                     -moz-transition: all .1s linear;
+                     -webkit-appearance: none;
+                     }
+                     .label-float input:focus {
+                     border: 2px solid #3951b2;
+                     }
+                     .label-float input::placeholder {
+                     color: transparent;
+                     }
+                     .label-float label {
+                     pointer-events: none;
+                     position: absolute;
+                     top: calc(80% - 150px);
+                     left: 15px;
+                     transition: all .1s linear;
+                     -webkit-transition: all .1s linear;
+                     -moz-transition: all .1s linear;
+                     background-color: white;
+                     padding: 5px;
+                     box-sizing: border-box;
+                     }
+                     .label-float input:required:invalid+label {
+                     color: rgb(10, 10, 10);
+                     }
+                     .label-float input:focus:required:invalid {
+                     border: 2px solid rgba(104, 190, 247, 0.897);
+                     }
+                     .label-float input:focus+label,
+                     .label-float input:not(:placeholder-shown)+label {
+                     font-size: 13px;
+                     top: 0;
+                     color: #3951b2;
+                     }
+                     .label-float {
+                     border: 2px solid #ccc;
+                     display: inline-block;
+                     padding: 4px;
+                     height: 60px;
+                     background-color: rgb(255, 255, 255);
+                     }
+                     .label-float > input {
+                     border: none
+                     }
+                     .label-float > button {
+                     background-color: #e50914;
+                     background-image: linear-gradient(180deg,#e50914,#db0510);
+                     box-shadow: 0 1px 0rgba(0,0,0,.45);
+                     color: #fff;
+                     border: none;
+                     color: #fff;
+                     padding: 4px 10px;
+                     height:59px;
+                     align-items: center;
+                     display: inline-flex;
+                     flex-direction: row;
+                     line-height: normal;
+                     margin: 0.25em auto;
+                     padding: 0 1em;
+                     width: auto;
+                     }
+                     /**/           
+                     @media only screen and (min-width:955px){   
+                     .sec--3{
+                     position:absolute;
+                     height: 600px;
+                     }
+                     .box-shot{
+                     display: inline-block;
+                     align-items: left;
+                     width: 45px;
+                     left: 0;
+                     }
+                     .mob-img{
+                     margin: auto;
+                     display: block;
+                     position: absolute;
+                     max-width: 300px;
+                     max-height: 500px;
+                     }
+                     .anim-but-select{
+                     position: absolute;
+                     top:390px;
+                     left: 220px;
+                     z-index: 999;
+                     }
+                     .anim-button-download {
+                     left: 0;
+                     position: absolute;
+                     align-items: center;
+                     background: #000;
+                     border: 2px solid hsla(0,0%,100%,.25);
+                     border-radius: .75em;
+                     bottom: 18%;
+                     box-shadow: 0 0 2em 0 #000;
+                     display: flex;
+                     left: 50%;
+                     margin: 0 auto;
+                     min-width: 15em;
+                     padding: .25em .65em .1em 1em;
+                     position: absolute;
+                     transform: translateX(-50%);
+                     min-width: 280px;
+                     min-height:2px;
+                     }
+                     .gif-down{
+                     display: flex;
+                     width: 45px;
+                     position: absolute;
+                     right: 0;
+                     top:0;
+                     bottom:0;
+                     margin-top: auto;
+                     margin-bottom: auto;
+                     padding-right: 5%;
+                     align-items: center;
+                     }
+                     .brek{
+                     margin-left: 5%;
+                     width: 120px;
+                     overflow-wrap: break-word;
+                     text-align: left;
+                     }
+                     .style-text{
+                     text-align: right;
+                     position: absolute;
+                     display: inline;
+                     width: 450px;
+                     text-align: left;
+                     right: 200px;
+                     min-width: 200px;
+                     top: 200px;
+                     }}
+                  </style>
+                  <style>
+                     @media only screen and (max-width: 349px), only screen and (min-width: 350px) and (max-width: 399px), only screen and (min-width: 400px) and (max-width: 549px)
+                     {
+                     .sec-3 {
+                     font-size: 1.125rem;
+                     }
+                     .brek{
+                     margin-left: 5%;
+                     width: 120px;
+                     overflow-wrap: break-word;
+                     text-align: left;
+                     }
+                     .break-line{
+                     color: #0071eb;
+                     font-size: .75em;
+                     font-weight: 400;
+                     }
+                     h1{
+                     font-size: 27px;
+                     margin: 0 0 .4em;
+                     }
+                     .mob-img{
+                     margin: auto;
+                     display: block;
+                     position: relative;
+                     top: -15px;
+                     max-width: 430px;
+                     max-height: 500px;
+                     }
+                     .sec-3{
+                     font-size: 1em;
+                     padding-top: 6%;
+                     padding-bottom: 6%;
+                     background-color: black;
+                     text-align: center;
+                     color: white;
+                     margin-left:auto;
+                     margin-right: auto;
+                     color: #fff;
+                     margin-bottom: 0;
+                     padding: 50px 5%;
+                     position: relative;
+                     }
+                     .anim-button-download {
+                     align-items: center;
+                     background: #000;
+                     border: 2px solid hsla(0,0%,100%,.25);
+                     border-radius: .75em;
+                     bottom: 8%;
+                     box-shadow: 0 0 2em 0 #000;
+                     display: flex;
+                     left: 50%;
+                     margin: 0 auto;
+                     min-width: 15em;
+                     padding: .25em .65em .1em 1em;
+                     position: absolute;
+                     transform: translateX(-50%);
+                     min-width: 280px;
+                     min-height: 30px;
+                     }
+                     .box-shot{
+                     margin-top: auto;
+                     margin-bottom: auto;
+                     display: flex;
+                     align-items: center;
+                     width: 30px;
+                     left: 0;
+                     }
+                     .gif-down{
+                     display: flex;
+                     width: 45px;
+                     position: absolute;
+                     right: 0;
+                     top:0;
+                     bottom:0;
+                     margin-top: auto;
+                     margin-bottom: auto;
+                     padding-right: 5%;
+                     align-items: center;
+                     }}
+                     .kids-a-img{
+                     max-width: 100%;
+                     }
+                     /*mobile*/
+                     /*desktop*/
+                     .sec-3{
+                     border-bottom: 9px solid rgb(63, 58, 58);
+                     font-size: 1em;
+                     padding-top: 6%;
+                     padding-bottom: 6%;
+                     background-color: black;
+                     text-align: center;
+                     color: white;
+                     margin-left:auto;
+                     margin-right: auto;
+                     color: #fff;
+                     margin-bottom: 0;
+                     padding: 50px 5%;
+                     position: relative;
+                     }
+                     @media only screen and (min-width:955px){
+                     .sec-3{
+                     display: flex;
+                     border-top: 9px solid rgb(63, 58, 58);
+                     font-size: 1em;
+                     padding-top: 6%;
+                     padding-bottom: 6%;
+                     background-color: black;
+                     text-align: center;
+                     color: white;
+                     margin-left:auto;
+                     margin-right: auto;
+                     color: #fff;
+                     margin-bottom: 0;
+                     padding: 50px 5%;
+                     position: relative;
+                     }
+                     }
+                     .text-align-style{
+                     text-align: left;
+                     display: flex;
+                     justify-content: space-between;
+                     align-items: center;
+                     } 
+                  </style>
+                  <section class="sec-3">
+                     <div class="text-align-style">
+                        <div>
+                           <h1>Enjoy on your TV.</h1>
+                           <h3>Watch on Smart TVs, Playstation, Xbox, Chromecast, Apple TV, Blu-ray players, and more.</h3>
+                        </div>
+                     </div>
+                     <img class="kids-a-img"src="20220815_185049.gif" alt="kids">
+                  </section>
+                  <section class="sec-3 sec--3">
+                     <div class="style-text">
+                        <h1>
+                           Download your shows to watch offline.
+                        </h1>
+                        <h3>
+                           Save your favorites easily and always have something to watch.
+                        </h3>
+                     </div>
+                     <img class="mob-img" src="mobile-0819.jpg" alt="">
+                     <div class="anim-but-select">
+                        <div class="anim-button-download">
+                           <img class="box-shot" src="boxshot.png" alt="">
+                           <p class="brek">Stranger Things <a class="break-line">Downloading...</a></p
+                        </div>
+                        <img class="gif-down" src="download-icon.gif" alt="">
+                     </div>
+                     </div>
+                  </section>
+                  <section class="sec-3">
+                     <div class="text-align-style">
+                        <div>
+                           <h1>Watch everywhere.</h1>
+                           <h3>Stream unlimited movies and TV shows on your phone, tablet, laptop, and TV without paying more.</h3>
+                        </div>
+                     </div>
+                     <div>
+                     </div>
+                     <img class="kids-a-img"src="20220815_185121.gif" alt="kids">
+                  </section>
+                  <section class="sec-3">
+                     <div class="text-align-style">
+                        <div>
+                           <h1>Create profiles for kids.</h1>
+                           <h3>Send kids on adventures with their favorite characters in a space made just for them—free with your membership.</h3>
+                        </div>
+                     </div>
+                     <img class="kids-a-img"src="kid.png" alt="kids">
+                  </section>
+                  <style>
+                     .set-in-line-bt{
+                     display: break;
+                     font-size: 1em;
+                     padding-top: 6%;
+                     padding-bottom: 6%;
+                     background-color: black;
+                     text-align: center;
+                     color: white;
+                     color: #fff;
+                     margin-bottom: 0;
+                     position: relative;
+                     }
+                     :root{
+                     --clr: #303030;
+                     }
+                     .button-1,.button-2, .button-3, .button-4, .button-5, .button-6{
+                     border: 0;
+                     font-weight: 400;
+                     margin-bottom: 1px;
+                     padding: .8em 2.2em .8em 1.2em;
+                     position: relative;
+                     width: 60%;
+                     background-color: var(--clr);
+                     text-align: left;
+                     margin-top:.6% ;
+                     }
+                     #but-1,#but-2,#but-3,#but-4,#but-5,#but-6{
+                     margin-left: auto;
+                     margin-right: auto;
+                     width: 60%;
+                     padding: 1.2em;
+                     text-align: left;
+                     background-color: var(--clr);
+                     margin-bottom: 1px;
+                     }
+                  </style>
+                  <section class="set-in-line-bt">
+                     <br>
+                     <h1>Frequently Asked Questions</h1>
+                     <br>
+                     <button type="button" class="button-1" data-toggle="collapse" data-target="#but-1">
+                        <h4 class="inf-f">What is Netflix?</h4>
+                     </button>
+                     <div id="but-1" class="collapse">
+                        <h4>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.</h4>
+                        <h4>You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!</h4>
+                     </div>
+                     <button type="button" class="button-2" data-toggle="collapse" data-target="#but-2">
+                        <h4 class="inf-f">How much does Netflix cost?</h4>
+                     </button>
+                     <div id="but-2" class="collapse">
+                        <h4>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from BRL25.90 to BRL55.90 a month. No extra costs, no contracts.</h4>
+                     </div>
+                     <button type="button" class="button-3" data-toggle="collapse" data-target="#but-3">
+                        <h4 class="inf-f">Where can I watch?</h4>
+                     </button>
+                     <div id="but-3" class="collapse">
+                        <h4>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</h4>
+                        <br>
+                        <h4>You can also download your favorite shows with the iOS, Android, or Windows 10 app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</h4>
+                     </div>
+                     <button type="button" class="button-4" data-toggle="collapse" data-target="#but-4">
+                        <h4 class="inf-f">How do I cancel?</h4>
+                     </button>
+                     <div id="but-4" class="collapse">
+                        <h4>Netflix is flexible. There are no pesky contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</h4>
+                     </div>
+                     <button type="button" class="button-5" data-toggle="collapse" data-target="#but-5">
+                        <h4 class="inf-f">What can I watch on Netflix?</h4>
+                     </button>
+                     <div id="but-5" class="collapse">
+                        <h4>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want.</h4>
+                     </div>
+                     <button type="button" class="button-6" data-toggle="collapse" data-target="#but-6">
+                        <h4 class="inf-f">Is Netflix good for kids?</h4>
+                     </button>
+                     <div id="but-6" class="collapse">
+                        <h4>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and movies in their own space.</h4>
+                        <br>
+                        <h4>Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don’t want kids to see.</h4>
+                     </div>
+                     <style>
+                        @media only screen and (max-width: 349px), only screen and (min-width: 350px) and (max-width: 399px), only screen and (min-width: 400px) and (max-width: 549px)
+                        {
+                        .button-1,.button-2, .button-3, .button-4, .button-5, .button-6{width: 100% }
+                        #but-1,#but-2,#but-3,#but-4,#but-5,#but-6{width: 100%;}
+                        .text-align-style{
+                        text-align: center;
+                        display: block;
+                        justify-content: space-between;
+                        align-items: center;
+                        } 
+                        header {
+                        height: calc(100vh - 100px);
+                        }
+                        .anim-but-select{
+                        position: relative;
+                        top: -40px;
+                        }
+                        .mob-img{
+                        margin: auto;
+                        display: block;
+                        position: relative;
+                        top: -15px;
+                        max-width: 430px;
+                        max-height: 300px;
+                        }
+                        .grad {
+                        min-height:491.9px;
+                        min-width: 327px;
+                        width: 100%;
+                        height: 500px;
+                        }
+                        .sec-3 {
+                        font-size: 1.125rem;
+                        }
+                        .button-1,.button-2, .button-3, .button-4, .button-5, .button-6{
+                        border: 0;
+                        font-weight: 400;
+                        margin-bottom: 1px;
+                        padding: .8em 2.2em .8em 1.2em;
+                        position: relative;
+                        width: 100%;
+                        background-color: var(--clr);
+                        text-align: left;
+                        margin-top:1% ;
+                        }
+                        .brek{
+                        margin-left: 5%;
+                        width: 120px;
+                        overflow-wrap: break-word;
+                        text-align: left;
+                        }}
+                        /*desktop*/
+                        /*mobile*/
+                        /*
+                        @media only screen and (min-width: 1450px), only screen and (min-width: 550px) and (max-width: 949px), only screen and (min-width: 950px) and (max-width: 1449px){
+                        */
+                        .form{
+                        display: flex;
+                        flex-direction: column;
+                        }
+                     </style>
+                     <div class="form"></div>
+                     <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
+                     <form>
+                        <input type='text' name='pesquisa' placeholder='Email address'>
+                        <button type='submit'>Get Started ></button>
+                     </form>
+                  </section>
+                  <style>
+                     .site-footer-wrapper {
+                     background-color: black;
+                     display: flex;
+                     font-size: 1.5em;
+                     clear:both;
+                     margin:0 auto;
+                     padding-top:15px;
+                     line-height: 1.5em;
+                     text-transform:uppercase;
+                     letter-spacing:.1em;
+                     text-align: center;
+                     }
+                     div ul li{
+                     text-decoration: none;
+                     list-style: none;
+                     text-align: left;
+                     }
+                     .footer-top{
+                     margin-left: 4px;
+                     display: inline-block;
+                     font-size: 1em;
+                     }
+                  </style>
+                  <div class="site-footer-wrapper centered dark">
+                  <div class="footer-divider"></div>
+                  <div class="site-footer">
+                     <p class="footer-top">Dúvidas
                         <a class="footer-top-a" href="tel:0800-887-0201">0800-887-0201</a>
-                    </p>     
-              </div>  
-
-        <section>
-          <div class="division-1">
-            <ul>
-                <li id="">Perguntas frequentes</li>
-                <li id="">Centro de ajuda</li>
-                <li id="">Conta</li>
-                <li id="">Imprensa</li>
-                <li id="">Relações com investidores</li>
-                <li id="">Carreiras</li>
-                <li id="">Cartão pré-pago</li>
-                <li id="">Formas de assistir</li>
-            </ul> 
-
-    </section>
-<section>
-        <div class="lang-selection-container" id="lang-switcher">
-            <ul>
-                    <li id="">Termos de Usuário</li>
-                    <li id="">Privacidade</li>
-                    <li id="">Preferências de cookies</li>
-                    <li id="">Informações corporativas</li>
-                    <li id="">Entre em contato</li>
-                    <li id="">Teste de velocidade</li>
-                    <li id="">Avisos legais</li>
-                    <li id="">Originais Netflix</li>
-                </ul>
-            </div>
- 
-            <style>
-
-            nav{
-                width: 100%;
-                left: 0;
-                position: absolute;
-                text-align: left;
-            }
-            html{
-                background-color: #000;
-            }
-            .select_idiom{
-                display: flex;
-                align-items: center;
-                background-color: black;
-                padding: 6%;
-              
-                left:0;
-                right: 0;
-            }
-            .ui-select ,.footer-country{
-                margin-left: 2%;
-            }
-            </style>
-            
-            <nav class="select_idiom">
-                <nav class="select-arrow medium prefix globe">
-                    <select class="ui-select medium" tabindex="0" placeholder="lang-switcher" (change)="changeLanguage($event.target.value)">
-                        <option [selected]="language === 'br'" value="br" data-language="pt" data-country="BR">Português</option>
-                        <option [selected]="language === 'en'" value="en" data-language="en" data-country="BR">English</option>
-                    </select>
-                    <p class="footer-country">Netflix Brasil</p>
-                </nav>
-            </nav>
-
-    </body>
-    
-</html>
-
-
-
-
-
-
-
-
-
-
-
-
+                     </p>
+                  </div>
+                  <section>
+                     <div class="division-1">
+                     <ul>
+                        <li id="">Perguntas frequentes</li>
+                        <li id="">Centro de ajuda</li>
+                        <li id="">Conta</li>
+                        <li id="">Imprensa</li>
+                        <li id="">Relações com investidores</li>
+                        <li id="">Carreiras</li>
+                        <li id="">Cartão pré-pago</li>
+                        <li id="">Formas de assistir</li>
+                     </ul>
+                  </section>
+                  <section>
+                  <div class="lang-selection-container" id="lang-switcher">
+                     <ul>
+                        <li id="">Termos de Usuário</li>
+                        <li id="">Privacidade</li>
+                        <li id="">Preferências de cookies</li>
+                        <li id="">Informações corporativas</li>
+                        <li id="">Entre em contato</li>
+                        <li id="">Teste de velocidade</li>
+                        <li id="">Avisos legais</li>
+                        <li id="">Originais Netflix</li>
+                     </ul>
+                  </div>
+                  <style>
+                     nav{
+                     width: 100%;
+                     left: 0;
+                     position: absolute;
+                     text-align: left;
+                     }
+                     html{
+                     background-color: #000;
+                     }
+                     .select_idiom{
+                     display: flex;
+                     align-items: center;
+                     background-color: black;
+                     padding: 6%;
+                     left:0;
+                     right: 0;
+                     }
+                     .ui-select ,.footer-country{
+                     margin-left: 2%;
+                     }
+                  </style>
+                  <nav class="select_idiom">
+                     <nav class="select-arrow medium prefix globe">
+                        <select class="ui-select medium" tabindex="0" placeholder="lang-switcher" (change)="changeLanguage($event.target.value)">
+                           <option [selected]="language === 'br'" value="br" data-language="pt" data-country="BR">Português</option>
+                           <option [selected]="language === 'en'" value="en" data-language="en" data-country="BR">English</option>
+                        </select>
+                        <p class="footer-country">Netflix Brasil</p>
+                     </nav>
+                  </nav>
+               </body>
+            </html>
