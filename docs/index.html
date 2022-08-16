@@ -142,11 +142,12 @@
         <h3>
             Ready to watch? Enter your email to create or restart your membership.
         </h3>
-        <div class="label-float">
-            <input type="text" placeholder=" " required/>
-            <label>Email address</address></label>
-            <button class="style-submit" type='submit'>Get Started ></button>
-          </div>
+        
+        <form>
+            <input type='text' name='pesquisa' placeholder='O que você procura?'>
+            <button type='submit'>Get Started ></button>
+          </form>
+       
         </div>
     </header>
 
@@ -160,6 +161,36 @@
 
 
         <style>
+            input{
+            
+                width:50%;
+                height: 60px;
+            }
+form{
+    position: relative;
+    left: -20px;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+    form > input {
+      border: none;
+
+    }
+
+    form > button {
+
+        position: absolute;
+        height: 60px;
+        background-color: #e50914;
+        background-image: linear-gradient(180deg,#e50914,#db0510);
+        box-shadow: 0 1px 0rgba(0,0,0,.45);
+        color: #fff;
+        border: solid red;
+        color: #fff;
+
+    }
             * {
                 letter-spacing: 0!important;
             }
@@ -664,12 +695,10 @@
             </style>
               <div class="form"></div>
               <h4>Ready to watch? Enter your email to create or restart your membership.</h4>
-              <div class="input-group mb-3">
-                <div class="input-group-prepend">
-                  <span class="input-group-text" id="basic-addon1">@</span>
-                </div>
-                <input type="text" class="form-control" placeholder="Usuário" aria-label="Usuário" aria-describedby="basic-addon1">
-              </div>
+              <form action='/' method='post'>
+                <input type='text' name='pesquisa' placeholder='O que você procura?'>
+                <button type='submit'>Pesquisar</button>
+              </form>
         </section>
         <style>
             .site-footer-wrapper {
