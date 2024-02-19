@@ -1,2 +1,2 @@
-# Netflix-clone-gabpsx
- clone netflix
+# Netflix-template-gabpsx
+ template netflix
