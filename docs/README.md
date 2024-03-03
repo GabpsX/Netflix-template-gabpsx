@@ -1,2 +1,2 @@
-# Netflix-template-gabpsx
+# Netflix-template
  template netflix
